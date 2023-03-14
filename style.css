@@ -1,0 +1,252 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    transition: 0.5s;
+}
+
+header{
+    position:absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    position: relative;
+    max-width: 100px;
+}
+
+section ul{
+    display: flex;
+}
+
+section ul li{
+    list-style: none;
+}
+
+section ul li a{
+    display: inline-block;
+    margin-right: 40px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textarea{
+    max-width: 800px;
+}
+
+.textarea h2{
+    line-height: 1.5em;
+    font-weight: 900;
+    font-size: 3em;
+    color:#000;
+    text-transform: uppercase;
+}
+
+.textarea h2 span{
+    font-size: 2em;
+}
+
+.view-all{
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 15px 30px;
+    background: yellow;
+    color: #000;
+    border-radius: 5rem;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+}
+
+.view-all:hover{
+    background: #fff;
+    color: yellow;
+    border: 2px solid yellow;
+}
+
+.imgarea{
+    position: relative;
+    max-width: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-img
+{
+    width: 600px;
+    height: 70vh;
+    object-fit: contain;
+    transition: opacity;
+}
+
+.background-img{
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+    width: 600px;
+    height: 70vh;
+    object-fit: contain;
+    transition: opacity;
+}
+
+.imgarea:hover .background-img{
+    opacity: 1;
+}
+
+.imgarea:hover .hero-img{
+    opacity: 0;
+}
+
+.pokemon-list-icons
+{
+    position: absolute;
+    left: 50%;
+    bottom: 7.5rem;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.pokemon-list-icons li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 1.25rem;
+    cursor: pointer;
+}
+
+.pokemon-list-icons li img{
+    max-width: 50px;
+}
+
+.pokemon-list-icons li:hover{
+    transform: translateY(-20px);
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+      }
+
+    section {
+        padding-top: 10rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    header .logo{
+        max-width: 50px;
+    }
+
+    header ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1;
+        visibility: hidden;
+    }
+
+    header ul li a{
+        margin: 1rem 0;
+        font-size: 1.5rem;
+    }
+
+    header ul li a:hover{
+        color: #FF0000;
+    }
+
+    header ul.active{
+        visibility: visible;
+    }
+
+    .imgarea{
+        margin-top: 50px;
+    }
+
+    .hero-img,.background-img{
+        max-width: 400px;
+    }
+
+    .pokemon-list-icons {
+        bottom: 2rem;
+    }
+
+    .view-all{
+        display: block;
+        margin: 2rem 5rem 0rem 5rem;
+        text-align: center;
+    }
+
+    header {
+        padding: 20px 20px;
+    }
+
+    .textarea h2{
+        font-size: 2em;
+    }
+    
+    .textarea h2 span{
+        font-size: 3em;
+    }
+
+    #pokemon-name{
+        font-size: 1.5em;
+        margin: 1rem 0rem;
+    }
+
+    .toggleMenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./img/hamburger-icon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .toggleMenu.active{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./img/close.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+  }

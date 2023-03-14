@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PoKe-Home</title>
+</head>
+<body>
+    <section>
+        <header>
+            <img src="img/pokeball-icon.png" alt="pokeball_icon" class="logo">
+            <div class="toggleMenu" onclick="menuToggle()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pokemons</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Buy Cards</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textarea">
+                <h2><span>Let's</span><br>Catch them All</h2>
+                <h3 id="pokemon-name">Pikachu</h3>
+                <p id="pokemon-description">Pikachu (Japanese: ピカチュウ Pikachu) is an Electric-type Pokémon introduced in Generation I.<br>It evolves from Pichu when leveled up with high friendship and evolves into Raichu when exposed to a Thunder Stone. </p>
+                <a href="#" class="view-all"><h3>View All Pokemons</h3></a>
+            </div>
+            <div class="imgarea">
+                <img src="img/pikachu_front.png" alt="hero-img" class="hero-img">
+                <img src="img/pikachu_back.png" alt="background-img" class="background-img">
+            </div>
+        </div>
+        <ul class="pokemon-list-icons">
+            <li><img src="./img/pikachu_front.png" alt="pikachu_image" onclick="imgSlider('img/pikachu_front.png','img/pikachu_back.png',0)"></li>
+            <li><img src="./img/charmander_front.png" alt="charmander_image" onclick="imgSlider('img/charmander_front.png','img/charmander_back.png',1)"></li>
+            <li><img src="./img/bulbasaur_front.png" alt="bulbasaur_image" onclick="imgSlider('img/bulbasaur_front.png','img/bulbasaur_back.png',2)"></li>
+            <li><img src="./img/squirtle_front.png" alt="squirtle_image" onclick="imgSlider('img/squirtle_front.png','img/squirtle_back.png',3)"></li>
+        </ul>
+    </section>
+    <script>
+
+        let pokemon =[
+            {
+                "Name":"Pikachu",
+                "Color":"yellow",
+                "Description":'Pikachu (Japanese: ピカチュウ Pikachu) is an Electric-type Pokémon introduced in Generation I.</br>It evolves from Pichu when leveled up with high friendship and evolves into Raichu when exposed to a Thunder Stone.'
+            },
+            {
+                "Name":"Charmander",
+                "Color":"red",
+                "Description":"Charmander (Japanese: ヒトカゲ Hitokage) is a Fire-type Pokémon introduced in Generation I.</br>It evolves into Charmeleon starting at level 16, which evolves into Charizard starting at level 36.</br>Along with Bulbasaur and Squirtle, Charmander is one of the three starter Pokémon of Kanto available at the beginning of Pokémon Red, Green, Blue, FireRed, and LeafGreen. "
+            },
+            {
+                "Name":"Bulbasaur",
+                "Color":"green",
+                "Description":"Bulbasaur (Japanese: フシギダネ Fushigidane) is a dual-type Grass/Poison Pokémon introduced in Generation I.</br>It evolves into Ivysaur starting at level 16, which evolves into Venusaur starting at level 32.</br>Along with Charmander and Squirtle, Bulbasaur is one of the three starter Pokémon of Kanto available at the beginning of Pokémon Red, Green, Blue, FireRed, and LeafGreen. "
+            },
+            {
+                "Name":"Squirtle",
+                "Color":"blue",
+                "Description":"Squirtle (Japanese: ゼニガメ Zenigame) is a Water-type Pokémon introduced in Generation I.</br>It evolves into Wartortle starting at level 16, which evolves into Blastoise starting at level 36.</br>Along with Bulbasaur and Charmander, Squirtle is one of the three starter Pokémon of Kanto available at the beginning of Pokémon Red, Green, Blue, FireRed, and LeafGreen. "
+            }
+
+        ]
+
+        function imgSlider(image1,image2,index)
+        {
+            document.querySelector(".hero-img").src = image1;
+            document.querySelector(".background-img").src = image2;
+
+            document.getElementById("pokemon-name").innerHTML = pokemon[index].Name
+            document.getElementById("pokemon-description").innerHTML = pokemon[index].Description
+
+
+        }
+
+        function menuToggle()
+        {
+            const togglemenu = document.querySelector(".toggleMenu")
+            const navigation = document.querySelector(".navigation")
+            togglemenu.classList.toggle("active")
+            navigation.classList.toggle("active")
+        }
+    </script>
+</body>
+</html>
