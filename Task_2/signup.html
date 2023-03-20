@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="header">
+                <header>Sign Up</header>
+            </div>
+
+            <div class="hero-area">
+                <div class="input-field">
+                    <input type="text" name="fname-input" class="" placeholder="First Name" required>
+                    <span class="material-symbols-outlined">abc</span>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="lname-input" class="" placeholder="Last Name">
+                    <span class="material-symbols-outlined">abc</span>
+                </div>
+                <div class="input-field">
+                    <input type="email" name="email-input" class="" placeholder="E-mail" required>
+                    <span class="material-symbols-outlined">mail</span>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="username-input" class="" placeholder="Username" required>
+                    <span class="material-symbols-outlined">person</span>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password-input" class="" placeholder="Password" required>
+                    <span class="material-symbols-outlined">lock</span>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="confirm-password-input" class="" placeholder="Confirm Password" required>
+                    <span class="material-symbols-outlined">key</span>
+                </div>
+            </div>
+            
+
+            <div class="signup-bottom">
+                <div class="term">
+                    <input type="checkbox" name="remember-chk" class="">
+                    <label for="agree-chk">I agree to the terms and conditions</label>
+                </div>
+
+                <div class="submit-btn">
+                    <input type="button" value="Submit" onclick="openLogin()">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    function openLogin()
+    {
+        window.location.href = "./login.html"
+    }
+</script>
+</html>
