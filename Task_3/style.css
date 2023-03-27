@@ -1,0 +1,47 @@
+.container-fluid{
+    min-height: 100vh;
+    background-color: #ffbcd9;
+}
+
+.hero-div{
+    background-color: bisque;
+    padding: 2rem;
+    padding-left: 12%;
+    border-radius: 0.75rem;
+    box-shadow: 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.4)
+}
+
+li{
+    list-style: none;
+}
+
+.btnsubmit{
+    display: block;
+    margin-left: 25%;
+    padding: 0.75rem 2.5rem;
+    border-radius: 2rem;
+    background-color: aliceblue;
+}
+
+.btnsubmit:hover{
+    background-color: aliceblue;
+    border: 5px solid #ffbcd9;
+}
+
+.resultarea
+{
+    background-color:snow;
+    margin-top: 2rem;
+    padding: 1rem;
+    transform: translateX(-10%);
+    display: flex;
+    flex-direction: column;
+    gap: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.hide{
+    display: none;
+}
